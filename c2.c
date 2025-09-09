@@ -1,16 +1,18 @@
 #include <stdio.h>
+int calculate_total(int a, int b ) {
+return a*b;
+
+}
+
 int main(){
 int a;
 int b;
-int result=0;
 printf("first number : ");
 scanf("%d",&a);
-
 printf("second number : ");
 scanf("%d",&b);
 
-result=a*b;
-
-printf("the result is : %d",result);
+int sum=calculate_total(a,b);
+printf("the sum is : %d",sum);
 return 0;
-}
+}   

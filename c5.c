@@ -1,13 +1,22 @@
 #include <stdio.h>
-int main(){
-int n;
-int result=1;
-printf("first number : ");
-scanf("%d",&n);
-for(int i= 1; i<=n;i++)
-{
-    result*=i;
+long long factorial(int j) {
+    if (j == 0 || j == 1) {
+        return 1;
+    } else {
+        return j * factorial(j - 1);
+    }
 }
-printf("result is : %d",result);
-return 0;
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        printf("ERROR\n");
+    } else {
+        long long result = factorial(number);
+        printf("Factorial of %d is %lld\n", number, result);
+    }
+
+    return 0;
 }
