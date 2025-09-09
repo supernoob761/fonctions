@@ -1,21 +1,21 @@
 #include <stdio.h>
-long long factorial(int j) {
-    if (j == 0 || j == 1) {
+long long fac(int j) {
+    if (j == 0) {
         return 1;
     } else {
-        return j * factorial(j - 1);
+        return j * fac(j - 1);
     }
 }
 int main() {
-    int number;
+    int num;
     printf("Enter a number: ");
-    scanf("%d", &number);
+    scanf("%d", &num);
 
-    if (number < 0) {
+    if (num < 0) {
         printf("ERROR\n");
     } else {
-        long long result = factorial(number);
-        printf("Factorial of %d is %lld\n", number, result);
+        long long result = fac(num);
+        printf("Factorial of %d is %lld\n", num, result);
     }
 
     return 0;
